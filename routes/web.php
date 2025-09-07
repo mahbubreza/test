@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\JobController;
+use App\Http\Controllers\RegisteredUserController;
 use App\Models\Job;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
 
@@ -21,4 +23,5 @@ Route::view('/contact', 'contact');
 
 Route::resource('jobs', JobController::class);
 
+Route::get('/register', [RegisteredUserController::class, 'create']);
 
