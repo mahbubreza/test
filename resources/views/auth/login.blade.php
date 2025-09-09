@@ -11,7 +11,7 @@
                     <x-form-field>
                         <x-form-label for="email">Email</x-form-label>
                         <div class="mt-2">
-                            <x-form-input id="email" type="email" name="email" />
+                            <x-form-input id="email" type="email" name="email" :value="old('email')"/>
                         </div>
                         <x-form-error name="email" />
                     </x-form-field>
